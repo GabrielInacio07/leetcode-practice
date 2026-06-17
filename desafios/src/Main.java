@@ -2,22 +2,16 @@ class Main{
 
     public static void main(String[] args) {
 
-        int[] numbers = {5,15,35,20};
-        int target = 50;
-        int indiceI = 0;
-        int indiceJ = 0;
+        int number = 101;
 
-        for (int i = 0; i < numbers.length; i++){
-           for (int j = 0; j < numbers.length; j++){
-               if(numbers[i] + numbers[j] == target){
-                   indiceI = i;
-                   indiceJ = j;
-               }
-           }
+        String numberText = String.valueOf(number);
+        //System.out.println(numberText);
+        String numberTextReverse = new StringBuilder(numberText).reverse().toString();
+        //System.out.println(numberTextReverse);
+
+        if(numberText.equals(numberTextReverse)){
+            System.out.println("É igual");
         }
-
-        System.out.println("Indice I: " + indiceI);
-        System.out.println("Indice J: " + indiceJ);
 
     }
 }
