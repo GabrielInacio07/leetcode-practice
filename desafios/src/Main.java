@@ -1,17 +1,24 @@
-class Main{
+class Main {
 
     public static void main(String[] args) {
 
-        int number = 101;
+        String word = "abctu";
+        String word2 = "pqrqweqwe";
+        StringBuilder resultado = new StringBuilder();
 
-        String numberText = String.valueOf(number);
-        //System.out.println(numberText);
-        String numberTextReverse = new StringBuilder(numberText).reverse().toString();
-        //System.out.println(numberTextReverse);
+        char[] array = word.toCharArray();
+        char[] array2 = word2.toCharArray();
 
-        if(numberText.equals(numberTextReverse)){
-            System.out.println("É igual");
+        int menorTamanho = Math.min(array.length, array2.length);
+        for (int i = 0; i < menorTamanho; i++){
+
+            resultado.append(array[i]);
+            resultado.append(array2[i]);
         }
 
+        resultado.append(word.substring(menorTamanho));
+        resultado.append(word2.substring(menorTamanho));
+
+        System.out.println(resultado);
     }
 }
